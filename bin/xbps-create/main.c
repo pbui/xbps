@@ -403,7 +403,7 @@ ftw_cb(const char *fpath, const struct stat *sb, int type, struct FTW *ftwbuf _u
 			xbps_dictionary_get_uint64(linkinfo, "inode", &inode);
 			if (inode == sb->st_ino) {
 				/* matched */
-				printf("%lu %lu\n", inode, sb->st_ino);
+				printf("%"PRIu64" %"PRIu64"\n", inode, sb->st_ino);
 				break;
 			}
 		}
